@@ -1,0 +1,49 @@
+{
+  "name": "hearthstone-game-engine",
+  "version": "2.0.0",
+  "description": "《炉石传说》进阶规则集兼容实现 - TypeScript游戏引擎",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/main.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "hearthstone",
+    "game-engine",
+    "typescript",
+    "card-game",
+    "strategy-game",
+    "game-rules"
+  ],
+  "author": "Hearthstone Rules Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/hearthstone-game-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/example/hearthstone-game-engine/issues"
+  },
+  "homepage": "https://github.com/example/hearthstone-game-engine#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "jest": "^29.6.0",
+    "@types/jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
