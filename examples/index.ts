@@ -3,6 +3,7 @@
  */
 
 export { runBasicGameExample, runAdvancedGameExample } from './basic-game';
+import { runBasicGameExample, runAdvancedGameExample } from './basic-game';
 
 /**
  * 运行所有示例

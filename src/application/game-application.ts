@@ -298,7 +298,7 @@ export class GameApplication {
   /**
    * 检查游戏结束
    */
-  private checkGameEnd(): boolean {
+  public checkGameEnd(): boolean {
     const players = Array.from(this.gameState.players.values());
     let losingPlayers: PlayerID[] = [];
 

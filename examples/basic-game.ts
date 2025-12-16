@@ -60,14 +60,18 @@ export function runBasicGameExample() {
   console.log('\n开始游戏...');
   game.startGame();
 
-  // 模拟几个回合
-  simulateTurns(game, 3);
+  // 模拟几个回合（支持快速模式，便于 CI）
+  const defaultTurns = 3;
+  const isFast = process.env.FAST_EXAMPLE === '1';
+  const turns = isFast ? 1 : defaultTurns;
+  simulateTurns(game, turns);
 
-  // 显示最终统计
+  // 显示最终统计（快速模式下缩短等待时间）
+  const finalDelay = isFast ? 50 : 20000;
   setTimeout(() => {
     console.log('\n📈 游戏统计:');
     displayGameStats(game);
-  }, 20000);
+  }, finalDelay);
 }
 
 /**
@@ -82,7 +86,13 @@ function simulateTurns(game: GameApplication, numTurns: number) {
       return;
     }
 
-    if (game.checkGameEnd()) {
+    // 如果任一英雄已死亡，则视为游戏结束，停止模拟
+    const playersState = Array.from(game.getGameState().players.values());
+    if (playersState.some(p => {
+      const hero = game.getHero((p as any).controller);
+      return hero && hero.currentHealth <= 0;
+    })) {
+      console.log('\n🎮 检测到游戏结束，停止模拟');
       return;
     }
 
@@ -96,8 +106,9 @@ function simulateTurns(game: GameApplication, numTurns: number) {
 
     currentTurn++;
 
-    // 继续下一回合
-    setTimeout(playNextTurn, 6000);
+    // 继续下一回合（快速模式下缩短延迟）
+    const delay = process.env.FAST_EXAMPLE === '1' ? 10 : 6000;
+    setTimeout(playNextTurn, delay);
   }
 
   playNextTurn();

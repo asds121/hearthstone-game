@@ -1,10 +1,3 @@
-# API Documentation
-
-> 生成时间：2025-12-16T10:28:23.547Z
-
-
----
-
 **hearthstone-game**
 
 ***
@@ -137,38 +130,3 @@ tests/             # Jest 测试
 ---
 
 如需帮助或报告问题，请使用仓库 Issues 或联系维护者（见 `package.json` 中的仓库信息）。
-
----
-
-[**hearthstone-game**](README.md)
-
-***
-
-# hearthstone-game
-
-## Classes
-
-- [CardManager](classes/CardManager.md)
-- [CombatManager](classes/CombatManager.md)
-- [GameApplication](classes/GameApplication.md)
-- [GameEngine](classes/GameEngine.md)
-- [TriggerManager](classes/TriggerManager.md)
-- [TurnManager](classes/TurnManager.md)
-
----
-
-[**hearthstone-game**](README.md)
-
-***
-
-# hearthstone-game
-
-## Modules
-
-- [application](application/README.md)
-- [domain](domain/README.md)
-- [types](types/README.md)
-- [types/base.types](types/base.types/README.md)
-- [types/entities.types](types/entities.types/README.md)
-- [types/events.types](types/events.types/README.md)
-- [types/game.types](types/game.types/README.md)

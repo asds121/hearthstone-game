@@ -1,0 +1,17 @@
+{
+  "entryPoints": [
+    "src/application/index.ts",
+    "src/types/index.ts",
+    "src/types/entities.types.ts",
+    "src/types/game.types.ts",
+    "src/types/events.types.ts",
+    "src/types/base.types.ts",
+    "src/domain/index.ts"
+  ],
+  "out": "docs/api",
+  "plugin": ["typedoc-plugin-markdown"],
+  "entryPointStrategy": "expand",
+  "exclude": ["**/tests/**", "**/examples/**"],
+  "tsconfig": "tsconfig.json",
+  "logLevel": "Warn"
+}

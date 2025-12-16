@@ -1,12 +1,17 @@
 {
-  "name": "hearthstone-game-engine",
-  "version": "2.0.0",
+  "name": "hearthstone-game",
+  "version": "0.0.1",
   "description": "《炉石传说》进阶规则集兼容实现 - TypeScript游戏引擎",
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/main.js",
+    "example": "npx ts-node -r tsconfig-paths/register --transpile-only examples/basic-game.ts",
+    "example:fast": "cross-env FAST_EXAMPLE=1 npm run example",
+    "docs:generate": "typedoc --options typedoc.json",
+    "docs:merge": "node scripts/generate-api-md.js",
+    "docs": "npm run docs:generate && npm run docs:merge",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.ts",
@@ -21,16 +26,16 @@
     "strategy-game",
     "game-rules"
   ],
-  "author": "Hearthstone Rules Community",
+  "author": "asds121",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/example/hearthstone-game-engine.git"
+    "url": "https://github.com/asds121/hearthstone-game.git"
   },
   "bugs": {
-    "url": "https://github.com/example/hearthstone-game-engine/issues"
+    "url": "https://github.com/asds121/hearthstone-game/issues"
   },
-  "homepage": "https://github.com/example/hearthstone-game-engine#readme",
+  "homepage": "https://github.com/asds121/hearthstone-game#readme",
   "devDependencies": {
     "@types/node": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -40,7 +45,12 @@
     "@types/jest": "^29.5.0",
     "ts-jest": "^29.1.0",
     "rimraf": "^5.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
+    "typedoc": "^0.28.0",
+    "typedoc-plugin-markdown": "^4.9.0",
+    "cross-env": "^7.0.3"
   },
   "dependencies": {},
   "engines": {
