@@ -1,6 +1,6 @@
 # API Documentation
 
-> 生成时间：2025-12-16T10:28:23.547Z
+> 生成时间：2025-12-16T10:33:54.733Z
 
 
 ---
@@ -137,23 +137,6 @@ tests/             # Jest 测试
 ---
 
 如需帮助或报告问题，请使用仓库 Issues 或联系维护者（见 `package.json` 中的仓库信息）。
-
----
-
-[**hearthstone-game**](README.md)
-
-***
-
-# hearthstone-game
-
-## Classes
-
-- [CardManager](classes/CardManager.md)
-- [CombatManager](classes/CombatManager.md)
-- [GameApplication](classes/GameApplication.md)
-- [GameEngine](classes/GameEngine.md)
-- [TriggerManager](classes/TriggerManager.md)
-- [TurnManager](classes/TurnManager.md)
 
 ---
 
